@@ -8,7 +8,7 @@ import dotenv from "dotenv"
 const app = express();
 const PORT = process.env.PORT || 9000;
 
-app.get('/api/hello', async (req, res) => {
+app.use('/', async (req, res) => {
   const visitorName = req.query.visitor_name || 'Guest';
   const clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
