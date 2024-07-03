@@ -21,8 +21,11 @@ app.get('/api/hello', async (req, res) => {
     const data = {
       client_ip: ip,
       location: weatherData.location.name,
-      temperature: weatherData.current.temp_c,
-      greeting: `Hello, ${queryParams.visitor_name ? queryParams.visitor_name : 'Enter your name with params ?visitor_name=your_name'}!, the temperature is ${weatherData.current.temp_c} degrees Celsius in ${weatherData.location.name}`,
+      greeting: `Hello, ${
+        queryParams.visitor_name
+          ? queryParams.visitor_name
+          : 'Enter your name with params ?visitor_name=your_name'
+      }!, the temperature is ${weatherData.current.temp_c} degrees Celsius in ${weatherData.location.name}`,
     };
 
     res.json(data);
