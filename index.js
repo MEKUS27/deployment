@@ -6,7 +6,7 @@ import dotenv from "dotenv"
 // require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 9000;
 
 app.get('/api/hello', async (req, res) => {
   const visitorName = req.query.visitor_name || 'Guest';
@@ -27,6 +27,6 @@ app.get('/api/hello', async (req, res) => {
   });
 }); 
 
-app.listen(PORT, () => {
+app.listen(9000, () => {
   console.log(`Server is running on port ${PORT}`);
 });
