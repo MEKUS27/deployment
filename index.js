@@ -1,11 +1,10 @@
 const express = require('express');
 const axios = require('axios');
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config(); 
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Function to make a GET request to WeatherAPI
 async function getWeather(ip) {
   const url = `http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${ip}&aqi=no`;
   const response = await axios.get(url);
