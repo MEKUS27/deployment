@@ -14,7 +14,7 @@ const server = http.createServer(async (req, res) => {
   if (req.url.startsWith("/api/hello")) {
     try {
       const queryParams = url.parse(req.url, true).query;
-      const location = queryParams.location || 'London'; 
+      const location = queryParams.location || 'Lagos'; 
       const apiResponse = await makeApiCall(location);
 
       
